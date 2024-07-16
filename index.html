@@ -7,6 +7,13 @@
     <title>Darzine</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="swiper.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="testimonials.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="decode.js"></script>
@@ -46,6 +53,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         <!-- Desktop menu -->
         <div class="hidden md:flex flex-wrap items-center justify-center">
             <a class="mr-5 hover:text-gray-900" href="#">Products</a>
+            <a class="mr-5 hover:text-gray-900" href="blog.html">Blog</a>
             <a class="mr-5 hover:text-gray-900" href="#">Careers</a>
             <a class="mr-5 hover:text-gray-900" href="#">About us</a>
             <a class="mr-5 hover:text-gray-900" href="#">Contact</a>
@@ -59,7 +67,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">Products</a></li>
         <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">Careers</a></li>
         <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">About us</a></li>
-        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">Contact</a></li>
+        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="contact.html">Contact</a></li>
     </ul>
 </div>
 
@@ -129,7 +137,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
                   <h2 class="text-gray-900 text-lg title-font font-medium">Our Vision</h2>
                 </div>
                 <div class="flex-grow">
-                  <p class="leading-relaxed text-white">Darzine Pharmaceuticals aims to provide safe, effective, and affordable medicines globally through cutting-edge research, setting new healthcare standards for community well-being.</p>
+                  <p class="leading-relaxed text-white" style="color: #212121;">Darzine Pharmaceuticals aims to provide safe, effective, and affordable medicines globally through cutting-edge research, setting new healthcare standards for community well-being.</p>
                   <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -385,6 +393,51 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
           <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
         </div>
       </section>
+
+
+     
+      <div class="cd-slider">
+        <ul>
+          <li>
+            <div class="image" style="background-image:url(img/med1.jpg);"></div>
+            <div class="content">
+              <h2>Darnac Spas</h2>
+              <a href="#">view all products ></a>
+            </div>
+          </li>
+          <li>
+            <div class="image" style="background-image:url(img/med2.jpg);"></div>
+            <div class="content">
+              <h2>Accessories</h2>
+              <a href="#">view all products ></a>
+            </div>
+          </li>
+          <li>
+            <div class="image" style="background-image:url(img/med3.jpg);"></div>
+            <div class="content">
+              <h2>Winter Shoes</h2>
+              <a href="#">view all products ></a>
+            </div>
+          </li>
+          <li>
+            <div class="image" style="background-image:url(img/med4.jpg);"></div>
+            <div class="content">
+              <h2>Winter Collection 2017</h2>
+              <a href="#">view all products ></a>
+            </div>
+          </li>
+          <li>
+            <div class="image" style="background-image:url(img/med5.jpg);"></div>
+            <div class="content">
+              <h2>Summer Collection</h2>
+              <a href="#">view all products ></a>
+            </div>
+          </li>      
+        </ul>
+      </div> <!--/.cd-slider-->
+      
+
+
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
@@ -477,7 +530,74 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         </div>
       </section>
       
-   
+      
+      
+    <div class="testimonial aos-init">
+    
+      <div class="blog-slider swiper-container-fade swiper-container-horizontal">
+        <div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" style="width: 800px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+            <div class="blog-slider__img">
+              <img src="img/pers (1).jpg" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">26 December 2021</span>
+              <div class="blog-slider__title">Aarav Patel</div>
+              <div class="blog-slider__text">"I've struggled with allergies for years until I found Darzine Remedies. Their allergy medication has been a game-changer for me, providing relief without the drowsiness I experienced with other brands. Thank you, Darzine Remedies, for making such a difference in my life!"</div>
+              <a href="https://maps.app.goo.gl/5PkgRF3RAs1HPPCi6" class="blog-slider__button">READ MORE</a>
+            </div>
+          </div>
+          <div class="blog-slider__item swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 800px; opacity: 1; transform: translate3d(-800px, 0px, 0px); transition-duration: 0ms;">
+            <div class="blog-slider__img">
+              
+              <img src="img/pers (4).jpg" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">July 16, 2024</span>
+              <div class="blog-slider__title">Priya Sharma</div>
+              <div class="blog-slider__text">"As a healthcare provider, I rely on Darzine Remedies for their range of reliable medications. Their commitment to quality and patient safety is evident in every product. I confidently recommend their pharmaceuticals to my patients for various health conditions."</div>
+              <a href="https://maps.app.goo.gl/5PkgRF3RAs1HPPCi6" class="blog-slider__button">READ MORE</a>
+            </div>
+          </div>
+          <div class="blog-slider__item swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 800px; opacity: 0; transform: translate3d(-1600px, 0px, 0px); transition-duration: 0ms;">
+            <div class="blog-slider__img">
+              <img src="img/pers (3).jpg" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">26 December 2020</span>
+              <div class="blog-slider__title">Mei Lin Wong</div>
+              <div class="blog-slider__text">"I've been using Darzine Remedies' skincare products for months now, and I'm amazed at the results. Their dermatologically tested formulations have cleared my acne and improved my skin texture. I finally feel confident in my own skin again!"</div>
+              <a href="https://maps.app.goo.gl/5PkgRF3RAs1HPPCi6" class="blog-slider__button">READ MORE</a>
+            </div>
+          </div>
+          
+          <div class="blog-slider__item swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 800px; opacity: 0; transform: translate3d(-2400px, 0px, 0px); transition-duration: 0ms;">
+            <div class="blog-slider__img">
+              <img src="img/pers (2).jpg" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">26 December 2021</span>
+              <div class="blog-slider__title">Ayush Srivastava</div>
+              <div class="blog-slider__text">"Darzine has truly made a difference in my health. Their diabetes management products have helped me stabilize my condition significantly. I feel more energetic and in control of my health thanks to their reliable medications."</div>
+              <a href="https://maps.app.goo.gl/5PkgRF3RAs1HPPCi6" class="blog-slider__button">READ MORE</a>
+            </div>
+          </div>
+          
+        <div class="blog-slider__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 800px; opacity: 0; transform: translate3d(-3200px, 0px, 0px); transition-duration: 0ms;">
+            <div class="blog-slider__img">
+              
+              <img src="img/pers (1).jpg" alt="">
+            </div>
+            <div class="blog-slider__content">
+              <span class="blog-slider__code">26 December 2019</span>
+              <div class="blog-slider__title">Akash Dobhal</div>
+              <div class="blog-slider__text"></div>
+              <a href="https://maps.app.goo.gl/5PkgRF3RAs1HPPCi6" class="blog-slider__button">READ MORE</a>
+            </div>
+          </div></div>
+        <div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+          </div>
+      
 
       <section class="text-gray-700 body-font relative">
         <div class="absolute inset-0 bg-gray-300">
@@ -499,9 +619,17 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         </div>
       </section>
 
-
-      <!-- modify this form HTML and place wherever you want your form -->
-
+      <div class="social-container">
+        <p style="color:black;font-size:1.5rem;"  data-aos="zoom-out-down" data-aos-delay="00" class="aos-init">Connect with Darzine</p>
+          <ul class="social-icons">
+              <li data-aos="zoom-out-up" data-aos-delay="00" class="aos-init"><a href="https://www.facebook.com/GM-Gym-340077343235044"><i class="fa fa-facebook-square"></i></a></li>
+              <li data-aos="zoom-out-up" data-aos-delay="100" class="aos-init"><a href="https://www.instagram.com/darzineremedies/"><i class="fa fa-instagram"></i></a></li>
+              <li data-aos="zoom-out-up" data-aos-delay="200" class="aos-init"><a href="https://maps.app.goo.gl/Ye1htvDd9ZLv8Bg2A"><i class="fa fa-google"></i></a></li>
+              <li data-aos="zoom-out-up" data-aos-delay="300" class="aos-init"><a href="https://api.whatsapp.com/send?phone=+919794121133"><i class="fa fa-whatsapp"></i></a></li>
+              <li data-aos="zoom-out-up" data-aos-delay="400" class="aos-init"><a href="https://www.youtube.com/channel/UC53D3GSd3J5CQIjWElft8fA"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+          </div>
+      
     
       <footer class="text-gray-700 body-font">
         <div class="container px-5 py-24 mx-auto">
@@ -633,11 +761,6 @@ decodeText();
 setInterval(function(){ decodeText(); }, 10000);
 </script>
 
-
-<script>
-  // Function to start the counter
- 
- 
     <script>
 	$(function () { // wait for document ready
 		// init
@@ -687,5 +810,142 @@ $(document).ready(function () {
 });
 
   </script>
+  <script>
+      (function() {
+
+	function init(item) {
+		var items = item.querySelectorAll('li'),
+			current = 0;
+
+		//create nav
+		var nav = document.createElement('nav');
+		nav.className = 'nav_arrows';
+
+		//create button prev
+		var prevbtn = document.createElement('button');
+		prevbtn.className = 'prev';
+		prevbtn.setAttribute('aria-label', 'Prev');
+
+		//create button next
+		var nextbtn = document.createElement('button');
+		nextbtn.className = 'next';
+		nextbtn.setAttribute('aria-label', 'Next');
+
+		//create counter
+		var counter = document.createElement('div');
+		counter.className = 'counter';
+		counter.innerHTML = "<span>1</span><span>"+items.length+"</span>";
+
+		if (items.length > 1) {
+			nav.appendChild(prevbtn);
+			nav.appendChild(counter);
+			nav.appendChild(nextbtn);
+			item.appendChild(nav);
+		}
+
+		items[current].className = "current";
+		if (items.length > 1) items[items.length-1].className = "prev_slide";
+
+		var navigate = function(dir) {
+			items[current].className = "";
+
+			if (dir === 'right') {
+				current = current < items.length-1 ? current + 1 : 0;
+			} else {
+				current = current > 0 ? current - 1 : items.length-1;
+			}
+
+			var	nextCurrent = current < items.length-1 ? current + 1 : 0,
+				prevCurrent = current > 0 ? current - 1 : items.length-1;
+
+			items[current].className = "current";
+			items[prevCurrent].className = "prev_slide";
+			items[nextCurrent].className = "";
+
+			//update counter
+			counter.firstChild.textContent = current + 1;
+		}
+
+		prevbtn.addEventListener('click', function() {
+			navigate('left');
+		});
+
+		nextbtn.addEventListener('click', function() {
+			navigate('right');
+		});
+
+		//keyboard navigation
+		document.addEventListener('keydown', function(ev) {
+			var keyCode = ev.keyCode || ev.which;
+			switch (keyCode) {
+				case 37:
+					navigate('left');
+					break;
+				case 39:
+					navigate('right');
+					break;
+			}
+		});
+
+		// swipe navigation
+		// from http://stackoverflow.com/a/23230280
+		item.addEventListener('touchstart', handleTouchStart, false);        
+		item.addEventListener('touchmove', handleTouchMove, false);
+		var xDown = null;
+		var yDown = null;
+		function handleTouchStart(evt) {
+			xDown = evt.touches[0].clientX;
+			yDown = evt.touches[0].clientY;
+		};
+		function handleTouchMove(evt) {
+			if ( ! xDown || ! yDown ) {
+				return;
+			}
+
+			var xUp = evt.touches[0].clientX;
+			var yUp = evt.touches[0].clientY;
+
+			var xDiff = xDown - xUp;
+			var yDiff = yDown - yUp;
+
+			if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+				if ( xDiff > 0 ) {
+					/* left swipe */
+					navigate('right');
+				} else {
+					navigate('left');
+				}
+			} 
+			/* reset values */
+			xDown = null;
+			yDown = null;
+		};
+
+
+	}
+
+	[].slice.call(document.querySelectorAll('.cd-slider')).forEach( function(item) {
+		init(item);
+	});
+
+})();
+  </script>
+      <script>
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            mousewheel: {
+              invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+              el: '.blog-slider__pagination',
+              clickable: true,
+            }
+          });
+          </script>
+      
+  
   </body>
 </html>
