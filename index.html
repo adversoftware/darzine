@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Darzine</title>
+    <script src="https://kit.fontawesome.com/cb3a533a36.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="social.css">
+    <link rel="stylesheet" href="social.css"> 
+    <!-- font settings are also uploaded in social.css -->
+    <script src="scrollhindi.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
     <link rel="stylesheet" href="swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,14 +22,19 @@
     <script src="decode.js"></script>
     <script src="counter.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="scrollpage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jque ry/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Flow+Circular&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
   </head>
-  <body onload="load()" style=" font-family: 'Product Sans', sans-serif;">
-    <header class="text-gray-700 body-font border-b border-gray-200" style="
+  <body onload="load()" style="  font-family: 'Kodchasan', 'sans-serif';">
+    <header class="text-gray-700 body-font border-b " style="
       background: fixed;background-color:hsla(88,27%,98%,1);
 background-image:
 radial-gradient(at 98% 29%, hsla(144,100%,67%,1) 0px, transparent 50%),
@@ -35,12 +43,21 @@ radial-gradient(at 71% 27%, hsla(347,100%,67%,1) 0px, transparent 50%),
 radial-gradient(at 52% 37%, hsla(220,100%,67%,1) 0px, transparent 50%),
 radial-gradient(at 44% 78%, hsla(150,100%,67%,1) 0px, transparent 50%),
 radial-gradient(at 35% 34%, hsla(201,100%,67%,1) 0px, transparent 50%),
-radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); background-size: cover;">
+radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); background-size: cover;
+transition: 5s;
+    animation-name: slideshow;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    border-radius:0rem 0rem 20rem 0rem;">
         
-<nav class="bg-gray-100 p-4" style="background: none; ">
+<nav class="bg-none p-4" style="padding: 0px;" id="navbar" >
     <div class="container mx-auto flex flex-wrap items-center justify-between">
        
-            <img src="DR logo-01.png" style="max-width: 150px; height: auto; " alt="Logo">
+            <img src="DR logo-02.png" style="max-width: 70px; height: auto; " alt="Logo">
        
         <!-- Hamburger menu for mobile -->
         <div class="md:hidden">
@@ -51,24 +68,26 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
             </button>
         </div>
         <!-- Desktop menu -->
-        <div class="hidden md:flex flex-wrap items-center justify-center">
+        <div class="hidden md:flex flex-wrap items-center justify-center" style="">
             <a class="mr-5 hover:text-gray-900" href="products.html">Products</a>
             <a class="mr-5 hover:text-gray-900" href="blog.html">Blog</a>
-            <a class="mr-5 hover:text-gray-900" href="#">Careers</a>
+            <a class="mr-5 hover:text-gray-900" href="careers.html">Careers</a>
             <a class="mr-5 hover:text-gray-900" href="contact.html">Contact</a>
         </div>
     </div>
 </nav>
 
 <!-- Mobile menu (hidden by default) -->
-<div id="mobileMenu" class="md:hidden bg-gray-100 hidden" style=" font-family: 'Product Sans', sans-serif;">
+
+<div id="mobileMenu" class="md:hidden hidden " style=  " ">
     <ul class="flex flex-col items-center">
-        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="products.html">Products</a></li>
+        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="products.html" >Products</a></li>
         <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="blog.html">Blog</a></li>
-        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">Careers</a></li>
-        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="#">About us</a></li>
+        <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="careers.html">Careers</a></li>
+
         <li><a class="block py-2 px-4 text-gray-900 hover:bg-gray-200" href="contact.html">Contact</a></li>
     </ul>
+  
 </div>
 
 <!-- JavaScript to toggle mobile menu -->
@@ -80,6 +99,28 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         mobileMenu.classList.toggle('hidden');
     });
 </script>
+<style>
+  @keyframes slideshow{
+    0%{
+        background-image: url('slideshowimg/med1.jpg');
+    }
+    20%{
+        background-image: url('slideshowimg/med2.jpg');
+    }
+    40%{
+        background-image: url('slideshowimg/med3.jpg');
+    }
+    60%{
+        background-image: url('slideshowimg/med1.jpg');
+    }
+    80%{
+        background-image: url('slideshowimg/med2.jpg');
+    }
+    100%{
+        background-image: url('slideshowimg/med4.jpg');
+    }
+    
+}</style>  
 
        <!--  <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -88,8 +129,13 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
           </button> -->
       <section class="text-gray-200 body-font" style="">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center" style="background-color: aliceblue; padding: 2rem; border-radius: 20rem 50px 20rem 20px; background: rgba(255, 255, 255, 0.2);
+             
+              box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(5px);
+              border: 1px solid rgba(255, 255, 255, 0.3);"">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900" style="text-align: center;">
               <div class="decode-text">
                 <div class="text-animation">D</div>
                 <div class="text-animation">A</div>
@@ -98,7 +144,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
                 <div class="text-animation">I</div>
                 <div class="text-animation">N</div>
                 <div class="text-animation">E</div>
-                <div class="text-animation"> </div>
+                <div class="text-animation"></div><br>
                 <div class="text-animation">R</div>
                 <div class="text-animation">E</div>
                 <div class="text-animation">M</div>
@@ -108,21 +154,57 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
                 <div class="text-animation">E</div>
                 <div class="text-animation">S</div>
             </div>
-              <br class="hidden lg:inline-block">pharmaceutical company
+              <br class="hidden lg:inline-block">creating tomorrow's health solutions <br> <span style="background: linear-gradient(
+                to right,
+                #7953cd 20%,
+                #00affa 30%,
+                #0190cd 70%,
+                #764ada 80%);
+                -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;   background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate; @keyframes textShine{
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}">today.</span>
             </h1>
-            <p class="mb-8 leading-relaxed text-gray-500">At Darzine Pharmaceuticals, we are dedicated to improving health outcomes and enhancing lives through innovation in pharmaceuticals. With a commitment to excellence and a focus on quality, we strive to bring advanced therapies to patients worldwide.</p>
+            <p class="mb-8 leading-relaxed text-black-500">At Darzine Pharmaceuticals, we are dedicated to improving health outcomes and enhancing lives through innovation in pharmaceuticals. With a commitment to excellence and a focus on quality, we strive to bring advanced therapies to patients worldwide.</p>
             <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Blog</button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Contact us</button>
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" > <a href="blog.html">Blog</a></button>
+              <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"> <a href="contact.html">Contact us</a></button>
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" >
-            <img class="object-cover object-center rounded" alt="hero" src="600.png" style="">
+            <!-- <img class="object-cover object-center rounded" alt="hero" src="600.png" style="border-radius:2rem;"> -->
           </div>
         </div>
       </section>
     </header>
-      <section class="text-white-700 body-font border-t border-gray-200 bg-blue-200 bg-fixed bg-cover" style="border-radius: 40px; margin: 10% 5%; background-image: url('balls.jpg'); background-size: cover;">
+
+    <!-- scrollmagic horizontal hindi swipe -->
+    <div class="space-50vh lightBG"></div>  
+    <div class="racesWrapper">
+        <div class="races">
+          <h2>आपकी सेहत , हमारी प्राथमिकता: विश्वशनीय फार्मा सेवाएं | </h2>
+          <h2>Darzine Remedies</h2>
+          <h2>Pvt</h2>
+          <h2>Ltd</h2>
+          <h2>2011</h2>
+        </div>
+    </div>
+    <div class="space-50vh lightBG"></div>
+    <p style="font-family: 'flow circular', system-ui; font-size: 3rem;  background: -webkit-linear-gradient(#20BF55, #01BAEF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; text-align: center; ">darzine remedies is leading ph ar ma company </p>
+  
+
+
+      <section class="text-white-700 body-font border-t  bg-blue-200 bg-fixed bg-cover" style="border-radius: 40px; margin: 10% 5%; background-image: url('balls.jpg'); background-size: cover; background">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1" data-aos="fade-down" data-aos-duration="700" data-aos-ease="ease-in"></h2>
@@ -219,7 +301,80 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
           </div>
         </div>
       </section>
-      <section class="text-gray-700 body-font border-t border-gray-200">
+      </section>
+      <p style="font-family: 'flow circular', system-ui; font-size: 3rem;  background: -webkit-linear-gradient(#20BF55, #01BAEF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; text-align: center; ">darzine is the pharma company oftheworld</p>
+      <section class="masonry">
+      <ul class="masonry-list" style="margin-top: 5rem;">
+        <li class="tile-case">
+          <a href="#">
+            <div class="tile-primary-content">
+              <img src="img/d4.jpg"" alt="">
+            </div>
+            <div class="tile-secondary-content">
+              <h2>Music</h2>
+              <p>Fleet Foxes</p>
+            </div>
+          </a>
+        </li>
+        <li class="tile-job">
+          <a href="#">
+            <div class="tile-primary-content">
+              <h2>Career</h2>
+              <p>We're looking for consultants and other experts in advertising</p>
+            </div>
+            <div class="tile-secondary-content">
+              <p>Apply now and become successful</p>
+            </div>
+          </a>
+        </li>
+        <li class="tile-facebook">
+          <a href="#">
+            <div class="tile-primary-content">
+              <h2>Facebook</h2>
+              <p>Don't expect to reach us on the phone today. We're BBQing! :)</p>
+            </div>
+            <div class="tile-secondary-content">
+              <p>Like us on Facebook</p>
+            </div>
+          </a>
+        </li>
+        <li class="tile-twitter">
+          <a href="https://twitter.com/chrisgrabinski">
+            <div class="tile-primary-content">
+              <h2>Twitter</h2>
+              <p>@chrisgrabinski Lol. What's wrong with your CSS, bro?</p>
+            </div>
+            <div class="tile-secondary-content">
+              <p>Follow us on Twitter</p>
+            </div>
+          </a>
+        </li>
+        <li class="tile-person">
+          <a href="#">
+            <div class="tile-primary-content">
+              <img src="https://pbs.twimg.com/profile_images/687989817171288064/Y4PzAmSn.jpg" alt="">
+            </div>
+            <div class="tile-secondary-content">
+              <div class="tile-secondary-container">
+                <h2>Chris Grabinski</h2>
+                <p>Front-end Development</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="tile-client">
+          <a href="#">
+            <div class="tile-primary-content">
+              <img src="https://i.imgur.com/I6YDabc.png" alt="">
+            </div>
+          </a>
+        </li>
+      </ul>
+      </section>
+      
+      <section class="text-gray-700 body-font  ">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
           <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img alt="feature" class="object-cover object-center h-full w-full" src="ice2.png" style="max-width: 500px; height: auto;">
@@ -269,13 +424,14 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
             </div>
           </div>
         </div>
+      
       </section>
       
 
  
 
 
-      <section class="text-gray-700 body-font border-t border-gray-200" style="background-color:#e799ff; background: fixed;
+      <section class="text-gray-700 body-font border-t " style="background-color:#e799ff; background: fixed;
       background-image:
       radial-gradient(at 98% 82%, hsla(89,62%,60%,1) 0px, transparent 50%),
       radial-gradient(at 11% 79%, hsla(221,86%,79%,1) 0px, transparent 50%),
@@ -408,30 +564,31 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
       <div class="cd-slider">
         <ul>
           <li>
-            <div class="image" style="background-image:url(img/med1.jpg);"></div>
+            <div class="image" style="background-image:url(img/test\ \(1\).jpg);"></div>
             <div class="content" data-aos="zoom-out-left">
-              <h2>Darnac Spas</h2>
+              <h2>Darzine’s treatments have enhanced patient care.</h2>
               <a href="#">view all products ></a>
             </div>
           </li>
           <li>
-            <div class="image" style="background-image:url(img/med2.jpg);"></div>
+            <div class="image" style="background-image:url(img/test\ \(2\).jpg);"></div>
             <div class="content">
-              <h2>Accessories</h2>
+              <h2>Darzine’s reliability has been game-changing.</h2>
               <a href="#">view all products ></a>
             </div>
           </li>
           <li>
-            <div class="image" style="background-image:url(img/med3.jpg);"></div>
+            <div class="image" style="background-image:url(img/test\ \(3\).jpg);"></div>
             <div class="content">
-              <h2>Winter Shoes</h2>
+              <h2>Darzine’s treatments improved my patients’ lives. </h2>
+              <h3></h3>
               <a href="#">view all products ></a>
             </div>
           </li>
           <li>
-            <div class="image" style="background-image:url(img/med4.jpg);"></div>
+            <div class="image" style="background-image:url(img/test\ \(4\).jpg);"></div>
             <div class="content">
-              <h2>Winter Collection 2017</h2>
+              <h2>Darzine consistently delivers exceptional breakthroughs.</h2>
               <a href="#">view all products ></a>
             </div>
           </li>
@@ -447,7 +604,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
       
 
 
-      <section class="text-gray-700 body-font border-t border-gray-200">
+      <section class="text-gray-700 body-font border-t ">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900" data-aos="fade-down">Our Team</h1>
@@ -455,7 +612,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
           </div>
           <div class="flex flex-wrap -m-2">
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white ">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white ">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/80x80/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Holden Caulfield</h2>
@@ -464,7 +621,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/84x84/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Henry Letham</h2>
@@ -473,7 +630,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/88x88/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Oskar Blinde</h2>
@@ -482,7 +639,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/90x90/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">John Doe</h2>
@@ -491,7 +648,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200  border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center   border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/94x94/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Martin Eden</h2>
@@ -500,7 +657,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/98x98/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Boris Kitua</h2>
@@ -509,7 +666,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/100x90/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Atticus Finch</h2>
@@ -518,7 +675,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/104x94/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Alper Kamu</h2>
@@ -527,7 +684,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               </div>
             </div>
             <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg bg-white">
+              <div class="h-full flex items-center  border p-4 rounded-lg bg-white">
                 <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://dummyimage.com/108x98/edf2f7/a5afbd">
                 <div class="flex-grow">
                   <h2 class="text-gray-900 title-font font-medium">Rodrigo Monchi</h2>
@@ -540,7 +697,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
       </section>
      
       
-      <section class="text-gray-700 body-font border-t border-gray-200">
+      <section class="text-gray-700 body-font border-t ">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900" data-aos="fade-down">Testimonials</h1>
@@ -644,7 +801,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
               <li data-aos="zoom-out-up" data-aos-delay="100" class="aos-init"><a href="https://www.instagram.com/darzineremedies/"><i class="fa fa-instagram"></i></a></li>
               <li data-aos="zoom-out-up" data-aos-delay="200" class="aos-init"><a href="https://maps.app.goo.gl/Ye1htvDd9ZLv8Bg2A"><i class="fa fa-google"></i></a></li>
               <li data-aos="zoom-out-up" data-aos-delay="300" class="aos-init"><a href="https://api.whatsapp.com/send?phone=+919794121133"><i class="fa fa-whatsapp"></i></a></li>
-              <li data-aos="zoom-out-up" data-aos-delay="400" class="aos-init"><a href="https://www.youtube.com/channel/UC53D3GSd3J5CQIjWElft8fA"><i class="fa fa-youtube"></i></a></li>
+              <li data-aos="zoom-out-up" data-aos-delay="400" class="aos-init"><a href="https://www.youtube.com/channel/UC53D3GSd3J5CQIjWElft8fA"><i class="fa-brands fa-square-x-twitter"></i></a></li>
           </ul>
           </div>
       
@@ -652,7 +809,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
       <footer class="text-gray-700 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-            <div class="border-t border-gray-200">
+            <div class="border-t ">
           <div class="container px-5 py-8 flex flex-wrap mx-auto items-center">
             <div class="flex md:flex-no-wrap flex-wrap justify-center md:justify-start">
               <input class="sm:w-64 w-40 bg-gray-100 rounded sm:mr-4 mr-2 border border-gray-400 focus:outline-none focus:border-indigo-500 text-base py-2 px-4" placeholder="enter your email address" type="text">
@@ -689,7 +846,7 @@ radial-gradient(at 75% 37%, hsla(167,100%,67%,1) 0px, transparent 50%); backgrou
         <div class="bg-gray-200">
           <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
             <p class="text-gray-500 text-sm text-center sm:text-left">© 2011 Darzine Remedies Pvt Ltd |
-              <a href="#" class="text-gray-600 ml-1" target="_blank" rel="">Made by adver</a>
+              <a href="adver.html" class="text-gray-600 ml-1" target="_blank" rel="">Made by <img src="adveranimated.gif" style="max-width: 70px; height: auto"></a>
             </p>
             <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-gray-500 text-sm"></span>
           </div>
@@ -963,6 +1120,47 @@ $(document).ready(function () {
           });
           </script>
       
-  
+  <script>
+    window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    var sticky = navbar.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
+  </script>
+  <script>
+   
+const races = document.querySelector(".races");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+
+ScrollTrigger.create({
+	trigger:".racesWrapper",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
+	markers:true
+})
+
+
+  </script>
   </body>
 </html>

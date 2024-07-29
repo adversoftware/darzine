@@ -1,5 +1,92 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
+
+.kodchasan-extralight {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.kodchasan-light {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kodchasan-medium {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.kodchasan-semibold {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kodchasan-bold {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kodchasan-extralight-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.kodchasan-light-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.kodchasan-regular-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.kodchasan-medium-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.kodchasan-semibold-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.kodchasan-bold-italic {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.flow-circular-regular {
+  font-family: "Flow Circular", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 .social-container {
   width: 400px;
   margin: 200px auto;
