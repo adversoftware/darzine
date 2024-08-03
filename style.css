@@ -10,7 +10,31 @@ h2{
     font-family: "Product-sans", sans-serif;
     font-weight: 700;
     font-style: normal;
+
+
 }
+
+spanstyle {
+  background: linear-gradient(
+                to right,
+                #7953cd 20%,
+                #00affa 30%,
+                #0190cd 70%,
+                #764ada 80%);
+                -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;   background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate; @keyframes textShine{
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+}
+
 body{
     overflow-x: hidden;
 }
@@ -103,6 +127,51 @@ margin-top: 11%;
     display: inline-block;
     width: 10px;
   }
+
+  
+/* Style the search field */
+form.example input[type=text] {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 20px 0;
+ 
+  text-decoration: none;
+  text-shadow: 2px white;
+  transition: 0.5s;
+
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
+  background-color: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(30px);
+color: rgba(255,255,255,0.8);
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
   
 
   .races {
@@ -147,8 +216,8 @@ margin-top: 11%;
   }
   
   .races h2:last-of-type {
-    background-image: url(img/d1.jpg);
-    background-size: cover;
+
+   
   }
   
   .lightBG {
@@ -1132,7 +1201,8 @@ body::-webkit-scrollbar-thumb:hover {
     transition: transform 300ms cubic-bezier(0, 0, 0.4, 1);
   }
   .masonry-list li.tile-job .tile-primary-content {
-    background-color: #71964f;
+    background-image: url('slideshowimg/card\ 9.png');
+    background-size: contain;
   }
   .masonry-list li.tile-facebook a::after {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAtCAYAAACqCZtVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcwNjIyOTMwM0FFMTFFM0E3RTZGNTJCQUMxODFCMjUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcwNjIyOTIwM0FFMTFFM0E3RTZGNTJCQUMxODFCMjUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjU4OTgxNjkwM0FBMTFFM0E3RTZGNTJCQUMxODFCMjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjU4OTgxNkEwM0FBMTFFM0E3RTZGNTJCQUMxODFCMjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz61fp6rAAAA6klEQVR42uyUvQrCMBRGk1rcHHQQ3XVyESdx1CdwcPLxnH0H8QGcVKiDIOJkFezqT/wiXVp6k1bJIveDAy1ND7e5uZVKKVEwFVAGr/g+As/0Ij+HqAQmYAoGoJax5gHOIAR7sBC6YgNtsFLFMzdV3AJL0BDFs/aIBxLMvpTqbCnxCPTF99lQ4vEP0jsIqD3u5ZTcwDE+bnXQBLuPnDgNB0vXAzAEXuq9Kujqa0kMSBQPApWObpDpUyixbRylbY884SgsTohVBrYoAydXFYeuxBdX4iuLE83zibnnfwWLWcxiFrOYxX8rfgswAKPozlRQdflcAAAAAElFTkSuQmCC");
@@ -1303,3 +1373,21 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0;
   }
   
+
+  #descard{
+    color: gray;
+   
+    border-radius: 20px;
+    padding: 20px 30px;
+   
+    
+    background-size: cover;
+  
+  
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 6px 22px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+   
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
